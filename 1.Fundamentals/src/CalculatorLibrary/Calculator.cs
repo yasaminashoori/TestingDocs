@@ -19,6 +19,17 @@ public class Calculator
 
     public float Divide(float a, float b)
     {
+        EnsureThatDivisorIsNotZero(b);
+
         return a / b;
     }
+
+    private static void EnsureThatDivisorIsNotZero(float b)
+    {
+        if (b == 0)
+        {
+            throw new DivideByZeroException();
+        }
+    }
 }
+

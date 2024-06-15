@@ -5,7 +5,7 @@ using UnderstandingDependencies.Api.Options;
 
 namespace UnderstandingDependencies.Api.Repositories;
 
-public class UserRepository : IUserRepository
+public class UserRepository : IUserRepositoryd
 {
     private readonly SqliteDbConnectionFactory _connectionFactory;
 
