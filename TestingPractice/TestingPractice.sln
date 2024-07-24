@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F61514CC-77F4-4741-AF2B-4BDB6B193032}"
-	ProjectSection(SolutionItems) = preProject
-		..\netCore.FluentValidation\.gitignore = ..\netCore.FluentValidation\.gitignore
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StartTest", "StartTest", "{8BB443BA-58DA-419B-9213-1E005BB3AA5E}"
 EndProject
@@ -24,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop", "..\..\Fluent
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netCore.FluentValidation", "netCore.FluentValidation", "{83A81911-C647-4D62-BA02-3253503C3AF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netCore.FluentValidation", "netCore.FluentValidation\netCore.FluentValidation\netCore.FluentValidation.csproj", "{AE3B4EB6-9629-4665-BC5F-4A9CB00AC15D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netCore.FluentValidation", "netCore.FluentValidation\netCore.FluentValidation\netCore.FluentValidation.csproj", "{AE3B4EB6-9629-4665-BC5F-4A9CB00AC15D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

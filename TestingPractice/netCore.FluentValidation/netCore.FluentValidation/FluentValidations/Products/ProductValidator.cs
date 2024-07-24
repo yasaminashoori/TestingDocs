@@ -25,6 +25,9 @@ namespace netCore.FluentValidation.FluentValidations.Products
                 .WithMessage(PriceIsRequired)
                 .GreaterThan(0)
                 .WithMessage(PriceGreaterThan);
+
+
+
         }
     }
 }
