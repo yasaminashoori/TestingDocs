@@ -9,7 +9,7 @@ namespace netCore.FluentValidation.FluentValidations.Products
         {
             RuleFor(x => x.Name)
                 .NotEmpty()
-                .WithMessage(NameIsRequired);
+                .WithMessage(NameIsRequired).Length(3, 40); // could be shorter
             RuleFor(x => x.Name)
                 .Length(3, 50)
                 .WithMessage(NameLength);

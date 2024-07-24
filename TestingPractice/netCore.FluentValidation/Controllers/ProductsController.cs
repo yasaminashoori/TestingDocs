@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using netCore.FluentValidation.FluentValidations.Products;
 using netCore.FluentValidation.Models;
 using netCore.FluentValidation.Responses;
 using static netCore.FluentValidation.Constants.ProductMessage;
@@ -49,6 +50,15 @@ namespace netCore.FluentValidation.Controllers
         public BaseResponse<Product> CreateProduct([FromBody] Product request)
         {
             var products = GetProductList();
+            var validation = new ProductValidator();
+            var result = validation.Validate(request);
+            if (! result.IsValid)
+            {
+                foreach (var failure in result.Errors)
+                {
+                    Console.WriteLine("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
+                }
+            }
             products.Add(request);
 
             return new BaseResponse<Product>(request);
