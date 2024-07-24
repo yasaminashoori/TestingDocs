@@ -1,6 +1,0 @@
-@netCore.FluentValidation_HostAddress = http://localhost:5120
-
-GET {{netCore.FluentValidation_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
