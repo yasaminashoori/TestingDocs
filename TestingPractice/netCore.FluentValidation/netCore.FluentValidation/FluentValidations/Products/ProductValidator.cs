@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using netCore.FluentValidation.Models;
 using static netCore.FluentValidation.Constants.ProductMessage;
+
 namespace netCore.FluentValidation.FluentValidations.Products
 {
     public class ProductValidator : AbstractValidator<Product>
@@ -24,7 +25,6 @@ namespace netCore.FluentValidation.FluentValidations.Products
                 .WithMessage(PriceIsRequired)
                 .GreaterThan(0)
                 .WithMessage(PriceGreaterThan);
-
         }
     }
 }

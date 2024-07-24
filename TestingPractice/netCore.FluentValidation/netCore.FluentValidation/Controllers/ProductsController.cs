@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using netCore.FluentValidation.FluentValidations.Products;
 using netCore.FluentValidation.Models;
 using netCore.FluentValidation.Responses;
 using static netCore.FluentValidation.Constants.ProductMessage;
+
 namespace netCore.FluentValidation.Controllers
 {
     [Route("api/[controller]")]
@@ -52,7 +52,7 @@ namespace netCore.FluentValidation.Controllers
             var products = GetProductList();
             var validation = new ProductValidator();
             var result = validation.Validate(request);
-            if (! result.IsValid)
+            if (!result.IsValid)
             {
                 foreach (var failure in result.Errors)
                 {
@@ -82,7 +82,7 @@ namespace netCore.FluentValidation.Controllers
 
 
         [HttpDelete("{id}")]
-        public BaseResponse<Product> DeleteProduct([FromRoute]int id)
+        public BaseResponse<Product> DeleteProduct([FromRoute] int id)
         {
             var list = GetProductList();
             var product = list.FirstOrDefault(x => x.Id == id);

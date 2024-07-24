@@ -1,5 +1,6 @@
 ﻿namespace netCore.FluentValidation.Responses
 {
+
     public class BaseResponse<T>
     {
         public bool Success { get; set; } = true;
@@ -17,3 +18,4 @@
         }
     }
 }
+
